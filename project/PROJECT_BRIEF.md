@@ -1,22 +1,35 @@
 # Project Brief
 
-## Engagement Details
+## 1. Business Problem
 
-| Field | Detail |
-|---|---|
-| Project ID | MTL-XF-011 |
-| Project Title | Public Procurement Spend, Supplier Concentration & Contract Risk Intelligence |
-| Client | Confidential Public Sector Commercial & Procurement Directorate |
-| Sector | Public Sector / Commercial / Procurement |
-| Duration | 8 weeks |
-| Recommended Team Size | 6–8 |
-| Primary Sponsor | Commercial Director |
-| Senior Stakeholders | Head of Procurement, Category Management Lead, Commercial Finance Lead, Supplier Management Lead, Data Governance Lead, Data & Analytics Lead |
-| Primary Dataset | Contracts Finder notices — June 2026 flattened OCDS CSV releases |
+The commercial directorate manages a large volume of procurement activity across multiple buyers, categories and suppliers, but current reporting is fragmented across individual notices and spreadsheets. Leadership cannot easily see where public spend is concentrated, where the same supplier is repeatedly winning work, where low-value purchasing is fragmented across multiple awards, or where contracts may create upcoming re-procurement pressure.
 
-## 1. Client Situation
+This creates three practical risks. First, commercial teams may become overly dependent on a small number of suppliers without recognising the concentration early enough. Second, fragmented purchasing may prevent the organisation from identifying opportunities to consolidate demand or negotiate more effectively. Third, upcoming contract end dates and award timing may not be visible in one place, making forward procurement planning reactive rather than planned.
 
-The directorate publishes and manages a large volume of procurement activity, but commercial leaders do not have one governed view of supplier concentration, repeated awards, fragmented buying, contract timing and SME participation. Existing reports are notice-centric rather than decision-centric, so teams cannot consistently distinguish genuine commercial exposure from simple high-volume activity.
+The problem is therefore not “analyse procurement data”. The problem is that commercial leaders currently lack one governed, reproducible view that turns procurement notices into an evidence base for supplier review, category planning and future procurement workload.
+
+## What the Team Needs to Do
+
+The team is expected to build a governed procurement-intelligence solution that converts the raw Contracts Finder notice files into a decision-ready supplier, buyer, category and contract view.
+
+The work should include:
+- defining the commercial questions and stakeholder requirements before building;
+- documenting which notice, award, buyer, supplier, value, date and SME fields are trustworthy enough for analysis;
+- creating reproducible ingestion and transformation logic;
+- identifying amended, duplicated or incomplete notices before aggregation;
+- standardising supplier/buyer fields without creating false matches;
+- calculating supplier concentration, repeat-award and fragmented-purchasing measures;
+- identifying upcoming procurement/re-procurement workload from available dates;
+- analysing SME participation where the source supports it;
+- creating a transparent commercial-review prioritisation framework;
+- building a BI product that allows leaders to move from portfolio-level risk indicators to the underlying notices;
+- reconciling headline measures back to the source and completing UAT/handover.
+
+## Practical Use Case
+
+The finished product should support a monthly or quarterly commercial portfolio review. A Commercial Director should be able to open the dashboard and ask, for example: “Which category is becoming too concentrated around a small number of suppliers?”, “Which buyers appear to be repeatedly purchasing similar services in separate awards?”, or “Which contracts should procurement teams begin planning to re-compete soon?”
+
+The output is not intended to automatically label suppliers as risky. It is intended to identify where commercial managers should investigate, challenge or plan earlier.
 
 ## 2. Business Decision
 
