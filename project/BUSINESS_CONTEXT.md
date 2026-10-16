@@ -1,39 +1,36 @@
 # Business Context
 
-## Simulated Client
-
+## Client
 **Confidential Public Sector Commercial & Procurement Directorate**
 
-## Business Pressure
+## Current Problem
+The directorate publishes and manages a large volume of procurement activity, but commercial leaders do not have one governed view of supplier concentration, repeated awards, fragmented buying, contract timing and SME participation. Existing reports are notice-centric rather than decision-centric, so teams cannot consistently distinguish genuine commercial exposure from simple high-volume activity.
 
-The organisation manages a large portfolio of procurement notices and supplier relationships, but senior leaders cannot reliably identify supplier concentration, fragmented purchasing, contract expiry exposure, SME participation or opportunities for commercial intervention from one governed view.
+## Decision Owner
+**Commercial Director**
 
-Leadership is therefore seeking a repeatable evidence base rather than a one-off analysis.
+## Senior Stakeholders
+Head of Procurement, Category Management Lead, Commercial Finance Lead, Supplier Management Lead, Data Governance Lead, Data & Analytics Lead
 
-## Executive Decision
+## Decision to Support
+**Which suppliers, categories and contract groups should commercial leadership investigate first for concentration exposure, upcoming re-procurement pressure, fragmented demand or weak SME participation?**
 
-**Where should commercial leadership intervene first to reduce supplier dependency, prepare for contract expiry, consolidate fragmented demand and improve procurement outcomes?**
-
-## Stakeholders
-
-- **Commercial Director — Sponsor:** owns the decision and expected organisational outcome.
-- **Operational/Service Lead:** tests whether outputs can be used in day-to-day planning.
-- **Data Owner / Steward:** challenges definitions, source authority, quality and access.
-- **Finance/Risk/Performance stakeholder:** tests materiality and prioritisation.
-- **Data & Analytics Lead:** owns technical quality and maintainability.
-- **End users:** participate in UAT and usability feedback.
-
-## Multidisciplinary Operating Model
-
-| Role | Expected contribution |
+## Role Responsibilities
+| Role | Required contribution |
 |---|---|
-| Business Analyst | Lead discovery, stakeholder mapping, requirements, user stories, decision rules and acceptance criteria. |
-| Data Governance Analyst | Define ownership, glossary, quality rules, lineage, metadata and authoritative procurement fields. |
-| Data Engineer | Build reproducible ingestion and transformation of daily OCDS CSV releases. |
-| Data Analyst / Commercial Analyst | Analyse supplier concentration, procurement patterns, contract values, timing and SME participation. |
-| BI Developer | Build governed semantic measures and the commercial decision-support dashboard. |
-| Data Quality / Assurance Analyst | Test reconciliations, duplicate handling, field completeness and output controls. |
+| Business Analyst | Produce stakeholder map, as-is/to-be decision process, requirements catalogue, user stories and acceptance criteria. |
+| Data Governance Analyst | Produce procurement glossary, critical data-element register, ownership/stewardship matrix, DQ rules and lineage. |
+| Data Engineer | Build repeatable ingestion/standardisation of daily OCDS CSVs and an auditable supplier-award analytical model. |
+| Commercial/Data Analyst | Own concentration, fragmentation, SME and timing analysis plus interpretation. |
+| BI Developer | Build governed semantic measures and the commercial portfolio dashboard. |
+| Data Quality / Assurance Analyst | Own reconciliation, duplicate/amendment tests, UAT evidence and release QA. |
 
 ## Expected Organisational Outcome
 
-The value of the project is not the dashboard itself. The intended outcome is a trusted decision process that makes evidence, data quality, definitions, assumptions and recommended actions visible to the people accountable for the decision.
+The intended result is a governed, repeatable decision process. The BI product is one delivery component; it is not the project outcome by itself.
+
+## Evidence Chain
+
+**Requirement → governed field/definition → transformation → quality control → metric/analysis → decision insight → recommendation → UAT/acceptance**
+
+Every major recommendation should be traceable through this chain.

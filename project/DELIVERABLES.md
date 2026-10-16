@@ -1,75 +1,184 @@
 # Required Deliverables
 
-Every team must provide evidence for all deliverables.
+Every team repository must contain evidence for all deliverables below. A deliverable is complete only when its minimum contents and acceptance checks are satisfied.
 
-## D1 — Discovery, Stakeholder & Requirements Pack
-**Due:** Week 1  
+## D1 — Discovery, Decision & Requirements Pack
+**Due:** End of Week 1  
 **Location:** `docs/01-discovery/`
 
-Include the problem statement, stakeholder map, current/future decision process, user stories, functional/non-functional requirements, assumptions and acceptance criteria.
+Required:
+- agreed problem statement and decision statement;
+- stakeholder map and RACI/ownership view;
+- as-is decision/reporting process;
+- to-be decision process;
+- at least 8 prioritised functional/user requirements;
+- non-functional requirements covering reproducibility, usability and data quality;
+- assumptions, dependencies and out-of-scope list;
+- acceptance criteria mapped to requirements.
 
-## D2 — Data Governance & Source Assessment
-**Due:** Week 2  
-**Location:** `docs/02-data-governance/`
+**Acceptance:** every dashboard/analytical feature planned for delivery must map to at least one approved requirement.
 
-Include source register, business glossary, critical data elements, ownership/stewardship assumptions, data-quality rules, lineage, reuse constraints and governance risks.
+## D2 — Data Governance & Source Control Pack
+**Due:** End of Week 2  
+**Location:** `docs/02-data-governance/`, `data/SOURCE_REGISTER.md`
 
-## D3 — Reproducible Ingestion & Transformation
-**Due:** Week 3  
+Required:
+- source inventory and frozen-version details;
+- business glossary;
+- critical data-element register;
+- owner/steward assumption for each critical element;
+- source-to-target lineage;
+- data-quality rule catalogue;
+- access/reuse/licensing notes;
+- known governance risks.
+
+**Acceptance:** each headline KPI must trace to governed source fields and an approved definition.
+
+## D3 — Reproducible Ingestion & Analytical Model
+**Due:** End of Week 3  
 **Location:** `src/`, `sql/`, `docs/03-data-model/`
 
-Create repeatable acquisition, cleaning, standardisation and transformation logic. Raw data must remain unchanged.
+Required:
+- documented acquisition/load process;
+- raw-data preservation;
+- schema/type validation;
+- standardisation logic;
+- documented grain and keys;
+- curated analytical table(s);
+- rerunnable execution instructions;
+- error/exception handling.
 
-## D4 — Data Quality & Analytical Model
-**Due:** Week 3  
-**Location:** `docs/04-data-quality/`
+**Acceptance:** a clean rerun produces the same record-level/aggregate outputs from the same frozen input.
 
-Document profiling, duplicates, missingness, validation rules, exceptions, reconciliation and the analytical grain/model.
+## D4 — Data Quality, Reconciliation & Exceptions
+**Due:** End of Week 3  
+**Location:** `docs/04-data-quality/`, `tests/` where used
+
+Required:
+- row-count reconciliation;
+- duplicate assessment;
+- key uniqueness/referential checks where applicable;
+- missingness profile for critical fields;
+- accepted-value/range checks;
+- exception log;
+- documented inclusion/exclusion rules.
+
+**Acceptance:** every material record loss or exclusion is quantified and explained.
 
 ## D5 — KPI & Metric Catalogue
-**Due:** Week 4  
+**Due:** End of Week 4  
 **Location:** `docs/05-kpi-catalogue/`
 
-For every approved KPI document the definition, business purpose, calculation, grain, source fields, exclusions, owner and limitations.
+Minimum metric set:
+- total awarded value with documented value rule;
+- award/notices count;
+- unique suppliers;
+- supplier share of awarded value;
+- top-5/top-10 supplier concentration;
+- buyer/category concentration;
+- SME award share where supported;
+- awards/notices with missing/invalid value;
+- contracts/notices approaching selected review horizon;
+- repeat supplier/buyer/category activity;
 
-## D6 — Core Analytical Assessment
-**Due:** Week 5  
+Each metric must contain: business purpose, definition, formula, grain, source fields, filters/exclusions, owner, refresh expectation and limitation.
+
+## D6 — Core Analytical Assessment I
+**Due:** End of Week 5  
 **Location:** `analysis/`, `docs/06-analysis/`
 
-Deliver a defensible assessment of supplier concentration, buyer/category fragmentation, contract lifecycle exposure, SME participation and commercial opportunity.
+Required:
+- supplier concentration by value and count;
+- top supplier dependence by buyer/category;
+- sensitivity of concentration to missing/invalid values;
+- supplier-name standardisation exceptions;
 
-## D7 — Decision / Prioritisation Framework
-**Due:** Week 6  
+For every major finding include the supporting measure, comparison basis, materiality and limitation.
+
+## D7 — Core Analytical Assessment II & Decision Framework
+**Due:** End of Week 6  
 **Location:** `docs/07-decision-framework/`
 
-Translate analysis into a transparent decision framework. Separate evidence, assumptions and professional judgement. Where scoring or modelling is used, document thresholds, sensitivity and limitations.
+Required:
+- fragmented purchasing patterns;
+- contract/re-procurement timing profile;
+- SME participation patterns;
+- priority-review segmentation with explicit rationale;
+
+Also provide:
+- explicit prioritisation factors;
+- threshold/rule rationale;
+- sensitivity test for at least one important threshold or assumption;
+- evidence that should trigger manual review;
+- evidence that is insufficient for action.
 
 ## D8 — BI / Decision-Support Product
 **Due:** Draft Week 6; final Week 7  
 **Location:** `dashboard/`
 
-Build a stakeholder-facing product using governed measures, clear navigation, appropriate filters, definitions, accessibility considerations and drill-through where useful.
+Required:
+- executive summary view;
+- diagnostic/drill-down view;
+- data-quality/definition information accessible to users;
+- governed measures only;
+- clear filter/reset behaviour;
+- visible reporting period/source version;
+- accessibility/readability considerations;
+- link or reproducible build instructions.
 
-## D9 — Assurance & User Acceptance
+**Acceptance:** at least five agreed headline measures reconcile to the curated analytical model.
+
+## D9 — Assurance & User Acceptance Testing
 **Due:** Week 7  
 **Location:** `docs/08-assurance-uat/`
 
-Provide test scenarios, reconciliation checks, UAT evidence, issue log and agreed acceptance status.
+Required:
+- minimum 10 test scenarios covering calculations, filters, edge cases and user journeys;
+- reconciliation evidence;
+- defect/issue log;
+- requirement-to-test traceability;
+- UAT feedback and disposition;
+- final acceptance status.
 
 ## D10 — Technical & Operational Handover
 **Due:** Week 8  
 **Location:** `docs/09-technical-handover/`
 
-Document architecture, setup, refresh/run process, dependencies, transformations, quality controls, metric logic, failure points and maintenance recommendations.
+Required:
+- prerequisites/setup;
+- end-to-end run instructions;
+- data refresh/update process;
+- architecture/data-flow diagram;
+- transformation and metric logic;
+- test commands/checks;
+- troubleshooting;
+- known limitations;
+- maintenance/change recommendations.
 
-## D11 — Executive Briefing & Final Presentation
-**Due:** Week 8 / Demo Day  
-**Location:** `deliverables/`
+## D11 — Executive Briefing & Demo-Day Presentation
+**Due:** Week 8  
+**Location:** `deliverables/executive-briefing/`, `deliverables/presentation/`
 
-Provide a concise executive briefing and a 15–20 minute presentation focused on the decision, evidence, recommendations, risks and next actions.
+Executive briefing: maximum two pages or equivalent.  
+Presentation: 15–20 minutes plus Q&A.
 
-## D12 — Contribution Record
+Both must state:
+- commissioned decision;
+- strongest evidence;
+- recommended action/investigation;
+- material limitations;
+- next steps.
+
+## D12 — Contribution & Delivery Evidence
 **Due:** Final submission  
-**Location:** `CONTRIBUTIONS.md`
+**Location:** `CONTRIBUTIONS.md` and GitHub history
 
-Record each member's role, actual responsibilities, principal artefacts, linked GitHub evidence and presentation contribution.
+For each member:
+- role;
+- owned work packages;
+- principal artefacts;
+- linked issues/PRs/commits;
+- review/assurance contribution;
+- presentation contribution.
+
+Commit count alone is not evidence of capability.
